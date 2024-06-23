@@ -9,59 +9,62 @@
 
     <main id="caixaEletronico">
         
-        <h2 id="valueCliente">Saldo total R$ <span id="saldoConta">850</span> </h2>
+        <p>Saldo da conta é de R$ <span id="saldoConta">850</span></p>
 
         <div id="saque">
-            <h3>
+
                 <p>Saque</p>
 
                 <input id="valorSaque" type="text" placeholder="Digite o valor do saque" value="">
 
-                <button id="buttonSaque" value="">Sacar</button>
-            </h3>
-        </div>
+                <button id="buttonSaque" onclick="saldoFinal()"> Sacar </button>
 
+            <!--                
+                <aside id="cedulas">
+                    <h3>
+                        Notas disponíveis no sistema
+                    </h3>
+            
+                    <table>
+                        <ul>
+                            <li>
+                                Notas de R$100,00 => <span class="cedulasCount"> 30 </span>un
+                            </li>
+                            <li>
+            
+                                Notas de R$50,00 => <span class="cedulasCount"> 500 </span>un
+                            </li>
+            
+                            <li>
+                                Notas de R$20,00 => <span class="cedulasCount"> 0 </span>un
+                            </li>
+            
+                            <li>
+                                Notas de R$10,00 => <span class="cedulasCount"> 0 </span>un
+                            </li>
+            
+                            <li>
+                                Notas de R$5,00 => <span class="cedulasCount"> 0 </span>un
+                            </li>
+            
+                            <li>
+                                Notas de R$2,00 => <span class="cedulasCount"> 0 </span>un
+                            </li>
+            
+                            <li>
+                                Notas de R$1,00 => <span class="cedulasCount"> 0 </span>un
+                            </li>
+            
+                        </ul>
+                    </table>
+            
+                </aside>-->
+
+        </div>
+        
     </main>
 
-    <aside id="cedulas">
-        <h3>
-            Notas disponíveis no sistema
-        </h3>
-
-        <table>
-            <ul>
-                <li>
-                    Notas de R$100,00 => <span class="cedulasCount"> 30 </span>un
-                </li>
-                <li>
-
-                    Notas de R$50,00 => <span class="cedulasCount"> 500 </span>un
-                </li>
-
-                <li>
-                    Notas de R$20,00 => <span class="cedulasCount"> 0 </span>un
-                </li>
-
-                <li>
-                    Notas de R$10,00 => <span class="cedulasCount"> 0 </span>un
-                </li>
-
-                <li>
-                    Notas de R$5,00 => <span class="cedulasCount"> 0 </span>un
-                </li>
-
-                <li>
-                    Notas de R$2,00 => <span class="cedulasCount"> 0 </span>un
-                </li>
-
-                <li>
-                    Notas de R$1,00 => <span class="cedulasCount"> 0 </span>un
-                </li>
-
-            </ul>
-        </table>
-
-    </aside>
+    
 
     <script src="caixa.js"></script>
 

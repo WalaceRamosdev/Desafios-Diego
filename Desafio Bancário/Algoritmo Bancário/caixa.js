@@ -1,12 +1,5 @@
 
-let saldo = document.querySelector('#saldoConta')
-let btn = document.querySelector('#buttonSaque')
+let saldoConta = 850
+let saque = document.getElementById('input#valorSaque')
+let btn = document.getElementById('buttonSaque')
 
-
-let saque = document.querySelector('#valorSaque').value
-
-let saldoCliente = 
-
-btn.addEventListener ('click', () => {
-    saldoTotal = saque - saldo
-})
