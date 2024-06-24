@@ -1,5 +1,17 @@
+const saque = document.getElementById('valorSaque')
+const btn = document.getElementById('sacarValor')
 
-let saldoConta = 850
-let saque = document.getElementById('input#valorSaque')
-let btn = document.getElementById('buttonSaque')
+btn.addEventListener('click', (event) => {
+    event.preventDefault()
 
+    const value = Number(saque.value)
+
+    if (value =="" || isNaN(value)) {
+        alert('Informe apenas números')
+        return
+    }
+
+    const notasCem = value / 100
+    console.log (notasCem)
+
+})
