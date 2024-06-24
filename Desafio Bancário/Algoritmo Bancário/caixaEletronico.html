@@ -4,40 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caixa Eletrônico</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 <body>
 
     <main>
         
-        <form action="">
+        <form action="" id="form">
 
-            <h2>Caixa Eletrônico</h2>
+            <h2 id="title" >Caixa Eletrônico</h2>
 
             <div>
                 <input type="text" id="valorSaque" value="">
             </div>
 
-            <div>
-                <h3>Notas Disponiveis: </h3>
-                <p class="cedulas" id="cedulasCem"></p>
-                <p class="cedulas" id="cedulasCinquenta"></p>
-                <p class="cedulas" id="cedulasVinte"></p>
-                <p class="cedulas" id="cedulasDez"></p>
-                <p class="cedulas" id="cedulasCinco"></p>
-                <p class="cedulas" id="cedulasDois"></p>
-                <p class="cedulas" id="cedulasUm"></p>
-            </div>
-
-            <div>
-                <button id="sacarValor">
+            <div id="btn">
+                <button class="btn1" id="sacarValor">
                     Sacar
                 </button>
+
+                <button class="btn1" id="consultarSaldo">
+                    Saldo
+                </button>
             </div>
+
             
         </form>
+
+        
         
     </main>
 
+    <div id="cedulasUtilizadas">
+
+        <h3>Notas disponiveis: </h3>
+
+        <p class="cedulas" id="cedulasCem" id="">R$ <span id="cedulaFish"> 100 </span> = </p>
+        <p class="cedulas" id="cedulasCinquenta">R$ <span id="cedulaTiger"> 50 </span> = </p>
+        <p class="cedulas" id="cedulasVinte">R$ <span id="cedulaMonkey"> 20 </span> = </p>
+        <p class="cedulas" id="cedulasDez">R$ <span id="cedulaBird"> 10 </span> = </p>
+        <p class="cedulas" id="cedulasCinco">R$ <span id="cedulaHeron"> 5 </span> = </p>
+        <p class="cedulas" id="cedulasDois">R$ <span id="cedulaTurtle"> 2 </span> =</p>
+        <p class="cedulas" id="cedulasUm">R$ <span id="cedulaLitleBird"> 1 </span> = </p>
+
+    </div>
     
 
     <script src="caixa.js"></script>

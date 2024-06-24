@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter';    
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-image: linear-gradient(120deg, #F91F19, #FA702D);
+    background-repeat: no-repeat; 
+    
+}
+
+input {
+    padding: 5px;
+    transition: 0.6s;
+    font-weight: bold;
+    text-align: center;
+}
+
+input:hover {
+    background-color: #52FA8D;
+}
+
+
+#form {
+    box-shadow: -5px 2px 15px black;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.219);
+    height: 250px;
+    width: 500px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    color: white;    
+}
+
+#valorSaque {
+    box-shadow: 2px 2px 5px black;
+    border: none;
+    border-radius: 15px;
+    height: 25px;
+}
+
+#btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn1 {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: 0.6s;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 2px 2px 4px black;
+}
+
+.btn1:hover {
+    box-shadow: 2px 2px 4px black;
+    width: 85px;
+    border-radius: 45px;
+}
+
+#sacarValor {
+    background-color: #6DA581;
+}
+
+#sacarValor:hover {
+    background-color: #52FA8D;
+} 
+
+#consultarSaldo {
+    background-color: #6DA581;
+}
+
+#consultarSaldo:hover {
+    background-color: #52FA8D;
+}
+
+#cedulasUtilizadas {
+    margin-left: 30px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.219);
+    height: 250px;
+    width: 250px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 5px -2px 15px black;
+}
+.cedulas {
+    font-weight: bold;
+}
+
