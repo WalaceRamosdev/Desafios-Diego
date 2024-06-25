@@ -50,6 +50,8 @@ btn.addEventListener('click', (event) => {
 
     const value = Number(saque.value)
 
+
+
     if ( value =="" || isNaN (value) ) {
         alert('Informe apenas números')
         return
@@ -63,6 +65,9 @@ btn.addEventListener('click', (event) => {
         return
     }
 
+    
+
+    
     const notasCem = parseInt(value / 100)
     let resto = value % 100
 
@@ -82,44 +87,35 @@ btn.addEventListener('click', (event) => {
         resto = resto % 2
 
     const notasUm = parseInt(resto / 1)
-        resto = resto % 1
-
-        //\\
+        resto = resto % 1   
         
+
         if (notasCem > 0){
             cedulasCem.textContent =  "R$ 100 = " + (cedulaFish - notasCem) + " ▼ " 
         }
-        
 
         if (notasCinquenta > 0) {
             cedulasCinquenta.textContent = "R$ 50 = " + (cedulaTiger - notasCinquenta) + " ▼ "
         }
         
         if (notasVinte > 0) {
-            cedulasVinte.textContent = "R$ 20 = " + (cedulaMonkey - notasCem) + " ▼ "
+            cedulasVinte.textContent = "R$ 20 = " + (cedulaMonkey - notasVinte) + " ▼ "
         }
-        
-        
+
         if (notasDez > 0) {
-            cedulasDez.textContent = "R$ 10 = " + (cedulaBird - notasCem) + " ▼ "
+            cedulasDez.textContent = "R$ 10 = " + (cedulaBird - notasDez) + " ▼ "
         }
-        
-        
 
         if (notasCinco > 0) {
-            cedulasCinco.textContent = "R$ 5 = " + (cedulaHeron - notasCem) + " ▼ "
+            cedulasCinco.textContent = "R$ 5 = " + (cedulaHeron - notasCinco) + " ▼ "
         }
-        
-        
 
         if (notasDois > 0) {
-            cedulasDois.textContent = "R$ 2 = " + (cedulaTurtle - notasCem) + " ▼ "
+            cedulasDois.textContent = "R$ 2 = " + (cedulaTurtle - notasDois) + " ▼ "
         }
-        
-        
 
         if (notasUm > 0) {
-            cedulasUm.textContent = "R$ 1 = " + (cedulaLitleBird - notasCem) + " ▼ "
-        }
+            cedulasUm.textContent = "R$ 1 = " + (cedulaLitleBird - notasUm) + " ▼ "
+    }
 
-}) 
+})  
