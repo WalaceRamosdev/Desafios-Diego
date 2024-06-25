@@ -20,19 +20,19 @@ let cedulaHeron = document.getElementById('cedulaHeron')
 let cedulaTurtle = document.getElementById('cedulaTurtle')
 let cedulaLitleBird = document.getElementById('cedulaLitleBird')
 
-cedulaFish = Math.floor(Math.random() * 60)
-cedulaTiger = Math.floor(Math.random() * 60)
-cedulaMonkey = Math.floor(Math.random() * 60)
-cedulaBird = Math.floor(Math.random() * 60)
-cedulaHeron = Math.floor(Math.random() * 60)
-cedulaTurtle = Math.floor(Math.random() * 60)
-cedulaLitleBird = Math.floor(Math.random() * 60)
+cedulaFish = Math.floor(Math.random() * 20)
+cedulaTiger = Math.floor(Math.random() * 20)
+cedulaMonkey = Math.floor(Math.random() * 20)
+cedulaBird = Math.floor(Math.random() * 20)
+cedulaHeron = Math.floor(Math.random() * 20)
+cedulaTurtle = Math.floor(Math.random() * 20)
+cedulaLitleBird = Math.floor(Math.random() * 20)
 
 cedulasCem.textContent = "R$ 100 = " + cedulaFish
-cedulasCinquenta.textContent ="R$ 50 = " +  cedulaTiger
-cedulasVinte.textContent ="R$ 20 = " +  cedulaMonkey
+cedulasCinquenta.textContent ="R$ 50 = " + cedulaTiger
+cedulasVinte.textContent ="R$ 20 = " + cedulaMonkey
 cedulasDez.textContent ="R$ 10 = " +  cedulaBird
-cedulasCinco.textContent ="R$ 5 = " +  cedulaHeron
+cedulasCinco.textContent ="R$ 5 = " + cedulaHeron
 cedulasDois.textContent ="R$ 2 = " +  cedulaTurtle
 cedulasUm.textContent ="R$ 1 = " +  cedulaLitleBird
 
@@ -65,9 +65,24 @@ btn.addEventListener('click', (event) => {
         return
     }
 
-    
 
-    
+
+    while (value >= cedulasCem) {
+        cedulasCem.textContent =  "R$ 100 = " + value + " ▼ " 
+        value = value - 100
+    }
+
+    while (value <= cedulaTiger) {
+        cedulasCinquenta.textContent =  "R$ 50 = " + value + " ▼ " 
+        value = value - 50
+    }
+
+    while (value >= cedulaMonkey) {
+        cedulasVinte.textContent =  "R$ 20 = " +  + " ▼ " 
+        value = value - 20
+    }
+
+    /*
     const notasCem = parseInt(value / 100)
     let resto = value % 100
 
@@ -89,6 +104,7 @@ btn.addEventListener('click', (event) => {
     const notasUm = parseInt(resto / 1)
         resto = resto % 1   
         
+
 
         if (notasCem > 0){
             cedulasCem.textContent =  "R$ 100 = " + (cedulaFish - notasCem) + " ▼ " 
@@ -117,5 +133,6 @@ btn.addEventListener('click', (event) => {
         if (notasUm > 0) {
             cedulasUm.textContent = "R$ 1 = " + (cedulaLitleBird - notasUm) + " ▼ "
     }
+            */
 
 })  
