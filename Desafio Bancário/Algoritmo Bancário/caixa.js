@@ -1,4 +1,4 @@
-const saldoTotal = Math.floor(Math.random() * 2000)
+const saldoTotal = Math.floor(Math.random() * 2000 )
 
 const saque = document.getElementById('valorSaque')
 const btn = document.getElementById('sacarValor')
@@ -86,39 +86,40 @@ btn.addEventListener('click', (event) => {
 
         //\\
         
-        if (notasCem > 0) {
-            cedulasCem.textContent =  "R$ 100 = " + (cedulaFish - notasCem)
+        if (notasCem > 0){
+            cedulasCem.textContent =  "R$ 100 = " + (cedulaFish - notasCem) + " ▼ " 
         }
         
 
         if (notasCinquenta > 0) {
-            cedulasCinquenta.textContent = "R$ 50 = " + (cedulaTiger - notasCem)
+            cedulasCinquenta.textContent = "R$ 50 = " + (cedulaTiger - notasCinquenta) + " ▼ "
         }
         
         if (notasVinte > 0) {
-            cedulasVinte.textContent = "R$ 20 = " + (cedulaMonkey - notasCem)
+            cedulasVinte.textContent = "R$ 20 = " + (cedulaMonkey - notasCem) + " ▼ "
         }
         
+        
         if (notasDez > 0) {
-            cedulasDez.textContent = "R$ 10 = " + (cedulaBird - notasCem)
+            cedulasDez.textContent = "R$ 10 = " + (cedulaBird - notasCem) + " ▼ "
         }
+        
         
 
         if (notasCinco > 0) {
-            cedulasCinco.textContent = "R$ 5 = " + (cedulaHeron - notasCem)
+            cedulasCinco.textContent = "R$ 5 = " + (cedulaHeron - notasCem) + " ▼ "
         }
+        
         
 
         if (notasDois > 0) {
-            cedulasDois.textContent = "R$ 2 = " + (cedulaTurtle - notasCem)
+            cedulasDois.textContent = "R$ 2 = " + (cedulaTurtle - notasCem) + " ▼ "
         }
+        
         
 
         if (notasUm > 0) {
-            cedulasUm.textContent = "R$ 1 = " + (cedulaLitleBird - notasCem)
+            cedulasUm.textContent = "R$ 1 = " + (cedulaLitleBird - notasCem) + " ▼ "
         }
-        
 
 }) 
-
-    
