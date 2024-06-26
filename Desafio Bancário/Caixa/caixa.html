@@ -2,37 +2,27 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caixa</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
 </head>
 <body>
-    <main>
-        <form action="">
+    <div class="container">
+        <div class="container-cont">
+            <h1>Programa Caixa Eletrônico</h1>
+            <p>Valor do Saque R$:
+                <input type="text" id="inSaque">
+            </p>
+            <p>
+                <input type="button" value="Exibir Notas para Saque" id="btExibir">
+            </p>
+            <h3 id="outNotasCem"></h3>
+            <h3 id="outNotasCinquenta"></h3>
+            <h3 id="outNotasDez"></h3>
+        </div>
+    </div>
 
-            <div id="sacar">
-
-                <input type="text" id="saque" value="">
-
-                <button id="btn">Sacar</button>
-                <button id="saldo">Saldo</button>
-
-            </div>
-
-            <div id="saldo">
-                
-                <h3 id="title">
-                    Notas disponiveis
-                </h3>
-
-                <p>R$ 100 = <span id="cedulaFish"></span></p>
-                <p>R$ 50 = <span id="cedulaTiger"></span></p>
-
-            </div>
-
-        </form>
-    </main>
-
-    <script src="main.js"></script>
-
+    <script src="./script.js"></script>
 </body>
 </html>

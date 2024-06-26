@@ -1,3 +1,5 @@
+
+
 const saldoTotal = Math.floor(Math.random() * 2000 )
 
 const saque = document.getElementById('valorSaque')
@@ -20,24 +22,17 @@ let cedulaHeron = document.getElementById('cedulaHeron')
 let cedulaTurtle = document.getElementById('cedulaTurtle')
 let cedulaLitleBird = document.getElementById('cedulaLitleBird')
 
-cedulaFish = Math.floor(Math.random() * 20)
-cedulaTiger = Math.floor(Math.random() * 20)
-cedulaMonkey = Math.floor(Math.random() * 20)
-cedulaBird = Math.floor(Math.random() * 20)
-cedulaHeron = Math.floor(Math.random() * 20)
-cedulaTurtle = Math.floor(Math.random() * 20)
-cedulaLitleBird = Math.floor(Math.random() * 20)
 
-cedulasCem.textContent = "R$ 100 = " + cedulaFish
-cedulasCinquenta.textContent ="R$ 50 = " + cedulaTiger
-cedulasVinte.textContent ="R$ 20 = " + cedulaMonkey
-cedulasDez.textContent ="R$ 10 = " +  cedulaBird
-cedulasCinco.textContent ="R$ 5 = " + cedulaHeron
-cedulasDois.textContent ="R$ 2 = " +  cedulaTurtle
-cedulasUm.textContent ="R$ 1 = " +  cedulaLitleBird
+cedulasCem.textContent = "R$ 100 = " + 30//+ cedulaFish
+cedulasCinquenta.textContent ="R$ 50 = " + 500 // + cedulaTiger
+cedulasVinte.textContent ="R$ 20 = " + 45//+ cedulaMonkey
+cedulasDez.textContent ="R$ 10 = " + 90// +  cedulaBird
+cedulasCinco.textContent ="R$ 5 = " + 105// + cedulaHeron
+cedulasDois.textContent ="R$ 2 = " + 200//+  cedulaTurtle
+cedulasUm.textContent ="R$ 1 = " + 4// +  cedulaLitleBird
 
 const saqueAutorizado = "Saque realizado com sucesso !"
-const saqueNegado = "Saldo indisponivel ! Seu saldo é de: R$ " + saldoTotal
+const saqueNegado = "Saldo insuficiente ! Consulte seu saldo e tente novamente."
 
 btnSaldo.addEventListener('click', (event) => {
     event.preventDefault()
@@ -51,8 +46,7 @@ btn.addEventListener('click', (event) => {
     const value = Number(saque.value)
 
 
-
-    if ( value =="" || isNaN (value) ) {
+    if ( value == 0 || isNaN (value) ) {
         alert('Informe apenas números')
         return
     }
@@ -66,73 +60,64 @@ btn.addEventListener('click', (event) => {
     }
 
 
-
-    while (value >= cedulasCem) {
-        cedulasCem.textContent =  "R$ 100 = " + value + " ▼ " 
-        value = value - 100
-    }
-
-    while (value <= cedulaTiger) {
-        cedulasCinquenta.textContent =  "R$ 50 = " + value + " ▼ " 
-        value = value - 50
-    }
-
-    while (value >= cedulaMonkey) {
-        cedulasVinte.textContent =  "R$ 20 = " +  + " ▼ " 
-        value = value - 20
-    }
-
-    /*
-    const notasCem = parseInt(value / 100)
+    
+    let notasCem = Math.floor(value / 100)
     let resto = value % 100
 
-    const notasCinquenta = parseInt(resto / 50)
+
+    let notasCinquenta = Math.floor(resto / 50)
         resto = resto % 50
 
-    const notasVinte = parseInt(resto / 20)
+        
+
+    let notasVinte = Math.floor(resto / 20)
         resto = resto % 20
 
-    const notasDez = parseInt(resto / 10)
+    let notasDez = Math.floor(resto / 10)
         resto = resto % 10
 
-    const notasCinco = parseInt(resto / 5)
+    let notasCinco = Math.floor(resto / 5)
         resto = resto % 5
 
-    const notasDois = parseInt(resto / 2)
+    let notasDois = Math.floor(resto / 2)
         resto = resto % 2
 
-    const notasUm = parseInt(resto / 1)
-        resto = resto % 1   
-        
+    let notasUm = Math.floor(resto / 1)
 
 
-        if (notasCem > 0){
-            cedulasCem.textContent =  "R$ 100 = " + (cedulaFish - notasCem) + " ▼ " 
-        }
+    if (notasCem > 0) {
+        cedulasCem.textContent = `R$ 100 =  ${30 - notasCem} ▼ `
 
-        if (notasCinquenta > 0) {
-            cedulasCinquenta.textContent = "R$ 50 = " + (cedulaTiger - notasCinquenta) + " ▼ "
-        }
-        
-        if (notasVinte > 0) {
-            cedulasVinte.textContent = "R$ 20 = " + (cedulaMonkey - notasVinte) + " ▼ "
-        }
-
-        if (notasDez > 0) {
-            cedulasDez.textContent = "R$ 10 = " + (cedulaBird - notasDez) + " ▼ "
-        }
-
-        if (notasCinco > 0) {
-            cedulasCinco.textContent = "R$ 5 = " + (cedulaHeron - notasCinco) + " ▼ "
-        }
-
-        if (notasDois > 0) {
-            cedulasDois.textContent = "R$ 2 = " + (cedulaTurtle - notasDois) + " ▼ "
-        }
-
-        if (notasUm > 0) {
-            cedulasUm.textContent = "R$ 1 = " + (cedulaLitleBird - notasUm) + " ▼ "
     }
-            */
+
+    if (notasCinquenta > 0) {
+        cedulasCinquenta.textContent = `R$ 50 = ${500 - notasCinquenta} ▼ `
+        
+    }
+
+    if (notasVinte > 0) {
+        cedulasVinte.textContent = `R$ 20 = ${45 - notasVinte} ▼ `
+        
+    }
+
+    if (notasDez > 0) {
+        cedulasDez.textContent = `R$ 10 = ${90 - notasDez} ▼ `
+        
+    }
+
+    if (notasCinco > 0) {
+        cedulasCinco.textContent = `R$ 5 = ${105 - notasCinco} ▼ `
+        
+    }
+    
+    if (notasDois > 0) {
+        cedulasDois.textContent = `R$ 2 = ${200 - notasDois} ▼ `
+        
+    }
+
+    if (notasUm > 0) {
+        cedulasUm.textContent = `R$ 1 = ${4 - notasUm} ▼ `
+        
+    }
 
 })  
